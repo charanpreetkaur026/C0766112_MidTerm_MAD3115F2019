@@ -21,8 +21,7 @@ class Customer: IDisplay{
     var totalBillAmount: Float = 0.0
     
     var billDictionary = [Int:Bill]()
-    
-    billDictionary.updateValue(Bill, forKey: billId )
+    //billDictionary.updateValue(Bill, forKey: billId )
     
     
     init(customerId: Int, firstName: String, lastName: String ,  emailId: String) {

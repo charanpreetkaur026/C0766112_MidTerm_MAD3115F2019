@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCc-Da-RMe">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -42,9 +42,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <connections>
-                                    <action selector="txtEmail:" destination="unn-8L-BkU" eventType="editingDidEnd" id="zEL-mO-wAe"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,15 +58,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnRememberME" destination="f1S-is-Smc" id="nCo-X0-ANf"/>
-                        <outlet property="btnRememberMe" destination="f1S-is-Smc" id="F1G-uO-Rnr"/>
                         <outlet property="txtEmail" destination="KTA-w9-FaW" id="dHG-s4-EDR"/>
                         <outlet property="txtPassword" destination="yh6-nq-ypP" id="YUw-9U-PCM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="unn-8L-BkU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="713" y="139"/>
+            <point key="canvasLocation" x="1621.7391304347827" y="138.61607142857142"/>
         </scene>
         <!--Customer List Table-->
         <scene sceneID="XYq-dW-kmM">
@@ -90,25 +85,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXj-TV-145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="139"/>
+            <point key="canvasLocation" x="2344.9275362318845" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="cY3-CK-CKl">
+        <scene sceneID="SSw-5t-50q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IfM-nc-Q4t" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JCc-Da-RMe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WVd-B0-CxW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7dP-bl-ylG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kpu-lH-ryl"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iaf-kk-tli"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ze6-Zr-SAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdl-iv-eO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="139"/>
+            <point key="canvasLocation" x="711.59420289855075" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
