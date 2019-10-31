@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfM-nc-Q4t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -55,7 +55,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO">
                             <connections>
                                 <action selector="btnLogin:" destination="BYZ-38-t0r" id="2Ax-xB-fvc"/>
-                                <segue destination="1Su-E4-Bjj" kind="show" id="cmP-Gq-NQd"/>
+                                <segue destination="8A6-w4-521" kind="show" id="sm9-pf-xwK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -71,33 +71,23 @@
             </objects>
             <point key="canvasLocation" x="713" y="139"/>
         </scene>
-        <!--Customer List Table View Controller-->
-        <scene sceneID="L2j-41-FnT">
+        <!--Customer List Table-->
+        <scene sceneID="XYq-dW-kmM">
             <objects>
-                <tableViewController storyboardIdentifier="HomeVC" id="1Su-E4-Bjj" customClass="CustomerListTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GUQ-rp-Vhm">
+                <viewController title="Customer List Table" id="8A6-w4-521" customClass="CustomerListTableViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lfw-Jy-4xh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomerListTableVC" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vhc-Cs-XLh">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vhc-Cs-XLh" id="VEg-un-Iq9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1Su-E4-Bjj" id="HhF-oN-dIP"/>
-                            <outlet property="delegate" destination="1Su-E4-Bjj" id="X2X-Pb-544"/>
-                        </connections>
                     </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZg-Ay-qN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationItem key="navigationItem" title="Customer List " id="sNe-AT-1t5">
+                        <barButtonItem key="backBarButtonItem" title="Sign Out" id="Zrk-uJ-89O"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXj-TV-145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1397" y="139"/>
+            <point key="canvasLocation" x="1435" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cY3-CK-CKl">

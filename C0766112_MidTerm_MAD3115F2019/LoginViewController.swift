@@ -17,33 +17,14 @@ import UIKit
         
        
         @IBOutlet weak var btnRememberMe: UISwitch!
-        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            // Do any additional setup after loading the view.
+        }
         
         @IBAction func btnLogin(_ sender: UIBarButtonItem) {
-            //        let email = txtEmail.text!
-            //        let pass = txtPassword.text
-            //
-            //        if email == "charanpreet@gmail.com"
-            //        {
-            //            if pass == "123"
-            //            {
-//            /                print("Signed In ")
-            //            }
-            //        }
-            //        else
-            //        {
-            //            print("username or password is incorrect")
-            //        }
-            //
-            //        let sb = UIStoryboard(name: "Main", bundle: nil)
-            //        let homeVC = sb.instantiateViewController(withIdentifier: "homeVC") as! ViewController
-            //        HomeVC.email = email
-            //        //        self.present(homeVC, animated: true, completion: nil)
-            //        navigationController?.pushViewController(homeVC, animated: true)
-            
-            
-            
-            
+   
             let email = txtEmail.text
             let pass = txtPassword.text
             
@@ -52,11 +33,13 @@ import UIKit
                 if pass == "123"
                 {
                     print("Login Success...")
-                    let sb = UIStoryboard(name: "Main", bundle: nil)
-                    let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-                    homeVC.Email = email
-                    self.navigationController?.pushViewController(homeVC, animated: true)
-                    //self.present(homeVC, animated: true)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let customerListVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! CustomerListTableViewController
+                    
+                    self.navigationController?.pushViewController(customerListVC, animated: true)
+              
+                   customerListVC.Email = email
+
                     if(btnRememberMe.isOn)
                     {
                         print("Write Code to remember/store userId/Password")
@@ -69,25 +52,17 @@ import UIKit
                 else
                 {
                     //Show Alert Here
+                    let alert = UIAlertController(title: "Wrong Username Or Password", message: "change username or password", preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {action
+                        in
+                    print("Cancel clicked")
+
                     print("SHOW YOUR Alert Contoller with message User/Password Invalid")
-                }
+                }))
             }
             
-            override func viewDidLoad() {
-                super.viewDidLoad()
-                
-                // Do any additional setup after loading the view.
-            }
-            
-            
-            /*
-             // MARK: - Navigation
-             
-             // In a storyboard-based application, you will often want to do a little preparation before navigation
-             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-             // Get the new view controller using segue.destination.
-             // Pass the selected object to the new view controller.
-             }
-             */
-            
+}
+}
 }
