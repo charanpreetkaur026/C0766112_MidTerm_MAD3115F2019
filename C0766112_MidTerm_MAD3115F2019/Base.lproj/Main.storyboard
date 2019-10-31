@@ -13,18 +13,11 @@
         <!--Sign in-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-w9-FaW">
-                                <rect key="frame" x="33" y="270" width="331" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-nq-ypP">
                                 <rect key="frame" x="33" y="375" width="331" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -43,26 +36,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTA-w9-FaW">
+                                <rect key="frame" x="33" y="247" width="331" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <action selector="txtEmail:" destination="unn-8L-BkU" eventType="editingDidEnd" id="zEL-mO-wAe"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="MY4-Mi-f7G">
+                        <barButtonItem key="backBarButtonItem" title="Sign out" id="0vh-90-Dp6"/>
                         <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO">
                             <connections>
+                                <action selector="btnLogin:" destination="BYZ-38-t0r" id="2Ax-xB-fvc"/>
                                 <segue destination="1Su-E4-Bjj" kind="show" id="cmP-Gq-NQd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnRememberME" destination="f1S-is-Smc" id="nCo-X0-ANf"/>
+                        <outlet property="btnRememberMe" destination="f1S-is-Smc" id="F1G-uO-Rnr"/>
+                        <outlet property="txtEmail" destination="KTA-w9-FaW" id="dHG-s4-EDR"/>
+                        <outlet property="txtPassword" destination="yh6-nq-ypP" id="YUw-9U-PCM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="unn-8L-BkU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="713" y="139"/>
         </scene>
         <!--Customer List Table View Controller-->
         <scene sceneID="L2j-41-FnT">
             <objects>
-                <tableViewController id="1Su-E4-Bjj" customClass="CustomerListTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HomeVC" id="1Su-E4-Bjj" customClass="CustomerListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GUQ-rp-Vhm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
