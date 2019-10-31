@@ -57,7 +57,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="btnRememberME" destination="f1S-is-Smc" id="nCo-X0-ANf"/>
+                        <outlet property="btnLogin" destination="BWv-Wi-PuO" id="hec-TK-lgg"/>
+                        <outlet property="btnRememberMe" destination="f1S-is-Smc" id="M68-g3-tYL"/>
                         <outlet property="txtEmail" destination="KTA-w9-FaW" id="dHG-s4-EDR"/>
                         <outlet property="txtPassword" destination="yh6-nq-ypP" id="YUw-9U-PCM"/>
                     </connections>

@@ -14,20 +14,22 @@ import UIKit
         @IBOutlet weak var txtEmail: UITextField!
         
         @IBOutlet weak var txtPassword: UITextField!
-        
-       
         @IBOutlet weak var btnRememberMe: UISwitch!
+        @IBOutlet weak var btnLogin: UIBarButtonItem!
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             
             // Do any additional setup after loading the view.
         }
         
+  
         @IBAction func btnLogin(_ sender: UIBarButtonItem) {
    
             let email = txtEmail.text
             let pass = txtPassword.text
             
+            if email.isValidEmail(){
             if email == "charanpreet@gmail.com"
             {
                 if pass == "123"
