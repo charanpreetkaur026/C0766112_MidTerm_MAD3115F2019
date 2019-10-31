@@ -10,18 +10,25 @@ import UIKit
 
 class CustomerListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var customerList = [CustomersStruct]()
+    @IBOutlet var customerTable: UITableView!
+    
+   // var customerDict = []
+    var customerArray = Array<Customer>()
     
     
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "usersCell")
+        
+        cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
+        
+        return cell!
     }
     
 

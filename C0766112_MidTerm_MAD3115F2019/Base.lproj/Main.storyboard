@@ -84,6 +84,9 @@
                         <barButtonItem key="backBarButtonItem" title="Sign Out" id="Zrk-uJ-89O"/>
                         <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="customerTable" destination="lfw-Jy-4xh" id="Bks-Kj-39x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXj-TV-145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
