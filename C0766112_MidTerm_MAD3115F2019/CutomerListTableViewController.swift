@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CutomerListTableViewController.swift
 //  C0766112_MidTerm_MAD3115F2019
 //
 //  Created by MacStudent on 2019-10-31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CutomerListTableViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
