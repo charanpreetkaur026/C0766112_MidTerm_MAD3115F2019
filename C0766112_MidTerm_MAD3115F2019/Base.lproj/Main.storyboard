@@ -59,16 +59,16 @@
             </objects>
             <point key="canvasLocation" x="713" y="139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Customer List Table View Controller-->
         <scene sceneID="L2j-41-FnT">
             <objects>
-                <tableViewController id="1Su-E4-Bjj" sceneMemberID="viewController">
+                <tableViewController id="1Su-E4-Bjj" customClass="CustomerListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GUQ-rp-Vhm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vhc-Cs-XLh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CustomerListTableVC" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vhc-Cs-XLh">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vhc-Cs-XLh" id="VEg-un-Iq9">
