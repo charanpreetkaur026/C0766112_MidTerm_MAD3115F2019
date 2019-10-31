@@ -9,14 +9,15 @@
 import Foundation
 
 extension String{
-func isValidEmail(emailStr:String) -> Bool {
-    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-    
-    let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-    return emailPred.evaluate(with: emailStr)
-}
+
+    func  isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: self)
+    }
 /* referred from  https://stackoverflow.com/questions/25471114/how-to-validate-an-e-mail-address-in-swift
 */
+    //changed as per requirement
     
     
     
