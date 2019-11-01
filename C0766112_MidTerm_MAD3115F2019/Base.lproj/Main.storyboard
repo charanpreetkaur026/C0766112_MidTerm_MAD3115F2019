@@ -49,19 +49,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="MY4-Mi-f7G">
                         <barButtonItem key="backBarButtonItem" title="Sign out" id="0vh-90-Dp6"/>
-                        <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO">
-                            <connections>
-                                <action selector="btnLogin:" destination="BYZ-38-t0r" id="2Ax-xB-fvc"/>
-                                <segue destination="8A6-w4-521" kind="show" id="sm9-pf-xwK"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="btnLogin" destination="BWv-Wi-PuO" id="hec-TK-lgg"/>
-                        <outlet property="btnRememberMe" destination="f1S-is-Smc" id="M68-g3-tYL"/>
-                        <outlet property="txtEmail" destination="KTA-w9-FaW" id="dHG-s4-EDR"/>
-                        <outlet property="txtPassword" destination="yh6-nq-ypP" id="YUw-9U-PCM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
