@@ -32,7 +32,7 @@ class addNewCustomerViewController: UIViewController {
         @objc
         func saveCustomer(sender: UIBarButtonItem)
         {
-            print("Customer Added")
+            print("Customer Added successfully")
             let sb1=UIStoryboard(name: "Main", bundle: nil)
             let customerListVC=sb1.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
             navigationController?.pushViewController(customerListVC, animated: true)

@@ -49,8 +49,18 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign in" id="MY4-Mi-f7G">
                         <barButtonItem key="backBarButtonItem" title="Sign out" id="0vh-90-Dp6"/>
-                        <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log in" id="BWv-Wi-PuO">
+                            <connections>
+                                <action selector="login_BTN:" destination="BYZ-38-t0r" id="kd5-cT-Jh3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnLogin" destination="BWv-Wi-PuO" id="Ar1-1s-5s4"/>
+                        <outlet property="btnRememberMe" destination="f1S-is-Smc" id="Ae6-Vu-nFc"/>
+                        <outlet property="txtEmail" destination="KTA-w9-FaW" id="qKM-5S-F8o"/>
+                        <outlet property="txtPassword" destination="yh6-nq-ypP" id="6DX-8W-RZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,7 +69,7 @@
         <!--Customer List Table-->
         <scene sceneID="XYq-dW-kmM">
             <objects>
-                <viewController title="Customer List Table" id="8A6-w4-521" customClass="CustomerListTableViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerListVC" title="Customer List Table" id="8A6-w4-521" customClass="CustomerListTableViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lfw-Jy-4xh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -95,7 +105,7 @@
         <!--New Customer-->
         <scene sceneID="yTT-hb-iZs">
             <objects>
-                <viewController id="Lf9-je-p1F" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="customerListVC" id="Lf9-je-p1F" customClass="addNewCustomerViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCb-DS-dC9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
