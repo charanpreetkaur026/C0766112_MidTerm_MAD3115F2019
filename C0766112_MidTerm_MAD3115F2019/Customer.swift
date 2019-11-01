@@ -22,7 +22,7 @@ class Customer{
      //static var customerClciked = Customer()
     
     
-    static var dictCustomers = [Int:Customer]()
+   // static var dictCustomers = [Int:Customer]()
     
     
     

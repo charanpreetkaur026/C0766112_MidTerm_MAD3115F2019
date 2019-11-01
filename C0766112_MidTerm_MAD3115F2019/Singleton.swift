@@ -27,8 +27,8 @@ class Singleton: NSObject
     {
         let c = customerDictionary.count + 1
         
-        let temp = Customer(customerId: c, firstName: First_Name, lastName: Last_Name, emailId: email)
-        self.AddCustomer(customer: temp)
+        let temp = Customer(customerId: c, firstName: First_Name, lastName: Last_Name, email: email)
+        self.AddCustomertoDict(customer: temp)
     }
     
     func returnCustObject(custID : Int) -> Customer?
@@ -51,21 +51,23 @@ class Singleton: NSObject
     
     func createCust()
     {
-        let c1 = Customer(customerId: 1, firstName: "Ankita", lastName: "Jain", emailId: "ankita@gmail.com ")
-        AddCustomer(customer: c1)
-        let c2 = Customer(customerId: 2, firstName: "kamal", lastName: "kaur", emailId: "kamal@gmail.com ")
-        AddCustomer(customer: c2)
-        let c3 = Customer(customerId: 3, firstName: "Karan", lastName: "Kumar", emailId: "karan321@gmail.com ")
-        AddCustomer(customer: c3)
-        let c4 = Customer(customerId: 4, firstName: "Sandeep", lastName: "Singh", emailId: "sandeep@gmail.com ")
-        AddCustomer(customer: c4)
+        let cust1 = Customer(customerId: 1, firstName: "Charan", lastName: "Kaur", email: "charan@gmail.com ")
+        let cust2 = Customer(customerId: 2, firstName: "Komal", lastName: "kaur", email: "kaomal@gmail.com ")
+        let cust3 = Customer(customerId: 3, firstName: "Camy", lastName: "Sandhu", email: "camy@gmail.com ")
+        let cust4 = Customer(customerId: 4, firstName: "varinder", lastName: "kaur", email: "varinder@gmail.com ")
+        let cust5 = Customer(customerId: 5, firstName: "Simran", lastName: "singh", email: "simran@gmail.com ")
+         AddCustomertoDict(customer: cust1)
+         AddCustomertoDict(customer: cust2)
+        AddCustomertoDict(customer: cust3)
+        AddCustomertoDict(customer: cust4)
+        AddCustomertoDict(customer: cust5)
         
     }
     
     
     
     
-    func AddCustomer(customer: Customer)
+    func AddCustomertoDict(customer: Customer)
     {
         customerDictionary.updateValue(customer, forKey: customer.customerId)
     }
