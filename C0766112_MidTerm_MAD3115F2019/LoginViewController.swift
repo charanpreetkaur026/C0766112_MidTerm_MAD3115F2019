@@ -20,11 +20,25 @@ import UIKit
         // static var customerClciked = Customer()
         private var dictCustomers = [Int:Customer]()
         // Refered from Ankita
-        let userDefault = UserDefaults.standard
+        var userDefault: UserDefaults!
         override func viewDidLoad() {
             super.viewDidLoad()
+            let getData = Singleton.getInstance()
+            getData.createCustomer()
+             userDefault = UserDefaults.standard
+            if let email = userDefault.value(forKey: "email"){
+                txtEmail.text = email as? String
+            }
+            
+            if let password = userDefault.value(forKey: "password"){
+                txtPassword.text = password as? String
+            }
             
         }
+        
+      
+        
+        
         // refered from moodle
         func readCustomersPlistFile() -> Bool{
             

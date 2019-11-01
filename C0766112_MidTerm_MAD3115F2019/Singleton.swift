@@ -49,18 +49,23 @@ class Singleton: NSObject
         return customerDictionary.count
     }
     
-    func createCust()
+    func createCustomer()
     {
         let cust1 = Customer(customerId: 1, firstName: "Charan", lastName: "Kaur", email: "charan@gmail.com ")
-        let cust2 = Customer(customerId: 2, firstName: "Komal", lastName: "kaur", email: "kaomal@gmail.com ")
-        let cust3 = Customer(customerId: 3, firstName: "Camy", lastName: "Sandhu", email: "camy@gmail.com ")
-        let cust4 = Customer(customerId: 4, firstName: "varinder", lastName: "kaur", email: "varinder@gmail.com ")
-        let cust5 = Customer(customerId: 5, firstName: "Simran", lastName: "singh", email: "simran@gmail.com ")
          AddCustomertoDict(customer: cust1)
+        let cust2 = Customer(customerId: 2, firstName: "Komal", lastName: "kaur", email: "kaomal@gmail.com ")
          AddCustomertoDict(customer: cust2)
-        AddCustomertoDict(customer: cust3)
-        AddCustomertoDict(customer: cust4)
-        AddCustomertoDict(customer: cust5)
+        let cust3 = Customer(customerId: 3, firstName: "Camy", lastName: "Sandhu", email: "camy@gmail.com ")
+         AddCustomertoDict(customer: cust3)
+        let cust4 = Customer(customerId: 4, firstName: "varinder", lastName: "kaur", email: "varinder@gmail.com ")
+         AddCustomertoDict(customer: cust4)
+        let cust5 = Customer(customerId: 5, firstName: "Simran", lastName: "singh", email: "simran@gmail.com ")
+            AddCustomertoDict(customer: cust5)
+        
+        
+       
+       
+    
         
     }
     

@@ -19,17 +19,7 @@ class Customer{
     }
     var email: String
     var totalBillAmount: Float = 0.0
-     //static var customerClciked = Customer()
     
-    
-   // static var dictCustomers = [Int:Customer]()
-    
-    
-    
-    
-    
-    //var billDictionary = [Int:Bill]()
-    //billDictionary.updateValue(Bill, forKey: billId )
     
     
     init(customerId: Int, firstName: String, lastName: String ,  email: String) {

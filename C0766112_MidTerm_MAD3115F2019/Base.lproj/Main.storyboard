@@ -100,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXj-TV-145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.9275362318845" y="138.61607142857142"/>
+            <point key="canvasLocation" x="3255.072463768116" y="138.61607142857142"/>
         </scene>
         <!--New Customer-->
         <scene sceneID="yTT-hb-iZs">
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2l5-Nr-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="-260"/>
+            <point key="canvasLocation" x="4038" y="-257"/>
         </scene>
         <!--Bill Details View Controller-->
         <scene sceneID="h1e-nB-TOT">
@@ -198,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfW-aK-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3153.6231884057975" y="458.70535714285711"/>
+            <point key="canvasLocation" x="4063.7681159420295" y="458.70535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SSw-5t-50q">
@@ -217,6 +217,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdl-iv-eO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="711.59420289855075" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="73x-aX-NU3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PVH-uS-k0V" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vgy-Kw-9LF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8A6-w4-521" kind="relationship" relationship="rootViewController" id="OBq-dB-kyA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFb-e2-Tut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344.9275362318845" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

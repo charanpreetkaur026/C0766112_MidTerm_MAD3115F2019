@@ -42,10 +42,21 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     }
     
     @IBOutlet var customerTable: UITableView!
+    public var Email: String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // aa
+        customerTable.delegate=self
+        customerTable.dataSource=self
+        navigationItem.hidesBackButton=true
+        addLogoutButton()
+        addNewCustomerButton()
+        //print("This is Customer list Table View")
+    }
    // var customerDict = []
   // var customerArray = Array<Customer>()
-var obj = Singleton.getInstance()
+    var obj = Singleton.getInstance()
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -58,14 +69,17 @@ var obj = Singleton.getInstance()
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
-        cell?.textLabel?.text = temp?.fullName
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
+        cell.textLabel?.text? = (temp?.fullName)!
+        return cell
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
         return "Customers List"
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         customerTable.reloadData()
         
@@ -86,17 +100,7 @@ var obj = Singleton.getInstance()
 //    }
 
     
-    public var Email: String?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // aa
-        customerTable.delegate=self
-        customerTable.dataSource=self
-        navigationItem.hidesBackButton=true
-        addLogoutButton()
-        addNewCustomerButton()
- //print("This is Customer list Table View")
-        }
+   
 
 
 
