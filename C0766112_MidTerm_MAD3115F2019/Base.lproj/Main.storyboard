@@ -88,11 +88,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Customers" id="sNe-AT-1t5">
                         <barButtonItem key="backBarButtonItem" title="customers" id="Zrk-uJ-89O"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG">
-                            <connections>
-                                <segue destination="Lf9-je-p1F" kind="show" id="dId-eE-zvD"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG"/>
                     </navigationItem>
                     <connections>
                         <outlet property="customerTable" destination="lfw-Jy-4xh" id="Bks-Kj-39x"/>
@@ -105,7 +101,7 @@
         <!--New Customer-->
         <scene sceneID="yTT-hb-iZs">
             <objects>
-                <viewController id="Lf9-je-p1F" customClass="addNewCustomerViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addCustomerVC" id="Lf9-je-p1F" customClass="addNewCustomerViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCb-DS-dC9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
