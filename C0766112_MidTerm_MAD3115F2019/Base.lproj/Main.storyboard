@@ -76,9 +76,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Customer List " id="sNe-AT-1t5">
-                        <barButtonItem key="backBarButtonItem" title="Sign Out" id="Zrk-uJ-89O"/>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG"/>
+                    <navigationItem key="navigationItem" title="Customers" id="sNe-AT-1t5">
+                        <barButtonItem key="backBarButtonItem" title="customers" id="Zrk-uJ-89O"/>
+                        <barButtonItem key="rightBarButtonItem" title="+" id="dOi-XJ-JVG">
+                            <connections>
+                                <segue destination="Lf9-je-p1F" kind="show" id="dId-eE-zvD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="customerTable" destination="lfw-Jy-4xh" id="Bks-Kj-39x"/>
@@ -87,6 +91,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXj-TV-145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2344.9275362318845" y="138.61607142857142"/>
+        </scene>
+        <!--New Customer-->
+        <scene sceneID="yTT-hb-iZs">
+            <objects>
+                <viewController id="Lf9-je-p1F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCb-DS-dC9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Customer ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C7d-gl-cfO">
+                                <rect key="frame" x="39" y="131" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5m-BD-FNv">
+                                <rect key="frame" x="39" y="193" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5HK-e5-3hL">
+                                <rect key="frame" x="39" y="251" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yc8-4K-hA4">
+                                <rect key="frame" x="39" y="323" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chK-5v-qJx">
+                                <rect key="frame" x="39" y="407" width="331" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uJF-cx-rel"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Customer" id="WoB-t1-nwl">
+                        <barButtonItem key="rightBarButtonItem" title="save" id="Egq-wq-b7g"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2l5-Nr-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3126" y="-260"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h1e-nB-TOT">
+            <objects>
+                <viewController id="O5S-st-jUQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPA-AV-9h2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIz-y8-Jr0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Bill Details" id="E8I-b1-F1A">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="BmX-n6-fZi"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Avq-ns-8Bl"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Add Bill" id="TLR-cx-Cks"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HCF-Gv-mDR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfW-aK-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3153.6231884057975" y="458.70535714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SSw-5t-50q">

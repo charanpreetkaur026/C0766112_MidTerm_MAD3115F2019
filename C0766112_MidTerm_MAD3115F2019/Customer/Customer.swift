@@ -20,6 +20,12 @@ class Customer: IDisplay{
     var emailId: String
     var totalBillAmount: Float = 0.0
     
+    static var dictCustomers = [Int:Customer]()
+    
+    
+    
+    
+    
     var billDictionary = [Int:Bill]()
     //billDictionary.updateValue(Bill, forKey: billId )
     
