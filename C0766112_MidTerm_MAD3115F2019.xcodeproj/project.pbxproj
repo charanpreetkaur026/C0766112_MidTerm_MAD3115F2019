@@ -22,6 +22,7 @@
 		9BEF7DF3236C95D700A0F494 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7DF2236C95D700A0F494 /* Extension+String.swift */; };
 		9BEF7DF5236C98A300A0F494 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7DF4236C98A300A0F494 /* Singleton.swift */; };
 		9BEF7DF7236CA97F00A0F494 /* addNewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7DF6236CA97F00A0F494 /* addNewCustomerViewController.swift */; };
+		9BEF7DF9236CC1C600A0F494 /* BillListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEF7DF8236CC1C600A0F494 /* BillListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9BEF7DF2236C95D700A0F494 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		9BEF7DF4236C98A300A0F494 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		9BEF7DF6236CA97F00A0F494 /* addNewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewCustomerViewController.swift; sourceTree = "<group>"; };
+		9BEF7DF8236CC1C600A0F494 /* BillListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				9B055933236B9B8A0056A416 /* Customers.plist */,
 				9BEF7DF4236C98A300A0F494 /* Singleton.swift */,
 				9BEF7DF6236CA97F00A0F494 /* addNewCustomerViewController.swift */,
+				9BEF7DF8236CC1C600A0F494 /* BillListViewController.swift */,
 			);
 			path = C0766112_MidTerm_MAD3115F2019;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				9BEF7DE1236C92CA00A0F494 /* Customer.swift in Sources */,
 				9BEF7DEF236C95D300A0F494 /* extension+Date.swift in Sources */,
 				9BEF7DF7236CA97F00A0F494 /* addNewCustomerViewController.swift in Sources */,
+				9BEF7DF9236CC1C600A0F494 /* BillListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

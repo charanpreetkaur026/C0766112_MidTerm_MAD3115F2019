@@ -55,11 +55,11 @@ var obj = Singleton.getInstance()
         
     }
 
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-         let x = obj.returnCustObject(custID: Int(indexPath.row+1))
+         let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
-        cell?.textLabel?.text = x?.fullName
+        cell?.textLabel?.text = temp?.fullName
         return cell!
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }
@@ -70,6 +70,14 @@ var obj = Singleton.getInstance()
         customerTable.reloadData()
         
     }
+    
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        let billListVC = sb.instantiateViewController(withIdentifier: "BillListVC") as? BillListViewController
+//        billListVC?.billdata = obj.returnCustObject(custID: indexPath.row + 1)
+//        
+//        navigationController?.pushViewController(billListVC!, animated: true)
+//    }
 //    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let x = obj.returnCustObject(custID: Int(indexPath.row+1))
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
