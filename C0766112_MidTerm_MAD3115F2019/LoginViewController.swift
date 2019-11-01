@@ -18,7 +18,9 @@ import UIKit
         @IBOutlet weak var btnLogin: UIBarButtonItem!
         
         // static var customerClciked = Customer()
-        private var dictCustomers  = [Int:Customer]()
+        private var dictCustomers = [Int:Customer]()
+        // Refered from Ankita
+        let userDefault = UserDefaults.standard
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -32,34 +34,60 @@ import UIKit
                     if email.isValidEmail(){
                         if let password = txtPassword.text{
                             if !password.isEmpty{
-                                    if  checkEmailPassword(email: email, password: password) {
-                                        setRememberMe()
+                                    if verifyEmailPassword(email: email, password: password) {
+                                        setValueRememberMe()
                                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                                         let dashboardVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! CustomerListTableViewController
                                         
                                         self.navigationController?.pushViewController(dashboardVC, animated: true)
                                        
                                     }else{
-                                        showAlerBox(msg: "You have enter wrong credentials")
+                                        showAlert(msg: "You have enter wrong credentials")
                                     }
                
                                 }
                                 
                             }else{
-                                showAlerBox(msg: "Please enter password")
+                                showAlert(msg: "Please enter password")
                             }
                         }
                     }
                     else{
-                        showAlerBox(msg: "Please enter valid email")
+                        showAlert(msg: "Please enter valid email")
                     }
                 }else{
-                    showAlerBox(msg: "Please enter useremail")
+                    showAlert(msg: "Please enter useremail")
                 }
             }
             
         }
-        
+
+
+func verifyEmailPassword(email : String , password : String) -> Bool{
+    
+    for everyCustomer in dictCustomers{
+        if (everyCustomer.email == email && everyCustomer.password == password) {
+            return true
+        }
+    }
+    return false
+}
+func setValueRememberMe()  {
+    if btnRememberMe.isOn {
+        userDefault.set(self.txtEmail.text, forKey: "userEmail")
+        userDefault.set(self.txtPassword.text, forKey: "userPassword")
+    }else{
+        userDefault.set("", forKey: "Email")
+        userDefault.set("", forKey: "Password")
+    }
+}
+func showAlert(msg : String)  {
+    let alertController = UIAlertController(title: "CustomerBillApp", message:
+        msg, preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+    
+    self.present(alertController, animated: true, completion: nil)
+}
         
 //        @IBAction func btnLogin(_ sender: UIBarButtonItem) {
 //
@@ -108,17 +136,17 @@ import UIKit
             // refered from moodle
             func readCustomersPlistFile() -> Bool{
 
-                if let bundlePath = Bundle.main.path(forResource: "Users", ofType: "plist") {
+                if let bundlePath = Bundle.main.path(forResource: "Customers", ofType: "plist") {
                     let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-                    let usersList = dictionary!["Users"] as! NSArray
+                    let customerlist = dictionary!["Customers"] as! NSArray
 //                if NSMutableDictionary(contentsOfFile: plist!) != nil{
             
-                    for u in usersList
+                    for cust in customerlist
                     {
-                        let user = u as! NSDictionary
-                        let uname = user["username"]! as! String
+                        let user = cust as! NSDictionary
+                        let email = user["email"]! as! String
                         let pwd = user["password"]! as! String
-                        if uname==txtEmail.text! && pwd==txtPassword.text!
+                        if email==txtEmail.text! && pwd==txtPassword.text!
                         {
                             return true
                         }
