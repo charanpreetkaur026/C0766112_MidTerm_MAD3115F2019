@@ -23,13 +23,14 @@ import UIKit
             // Do any additional setup after loading the view.
         }
         
-  
+      
         @IBAction func btnLogin(_ sender: UIBarButtonItem) {
    
             let email = txtEmail.text
             let pass = txtPassword.text
             
-            if email.isValidEmail(){
+            if email.isValidEmail()
+            {
             if email == "charanpreet@gmail.com"
             {
                 if pass == "123"

@@ -4,6 +4,9 @@
 <dict>
 	<key>users</key>
 	<array>
+		<string></string>
+		<string></string>
+		<string></string>
 		<dict>
 			<key>email</key>
 			<string></string>
