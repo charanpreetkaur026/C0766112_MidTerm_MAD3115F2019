@@ -34,7 +34,7 @@ class addNewCustomerViewController: UIViewController {
         {
             print("Customer Added")
             let sb1=UIStoryboard(name: "Main", bundle: nil)
-            let customerListVC=sb1.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListViewController
+            let customerListVC=sb1.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
             navigationController?.pushViewController(customerListVC, animated: true)
     
 

@@ -78,7 +78,7 @@ import UIKit
 
 func verifyEmailPassword(email : String , password : String) -> Bool{
    let bundlePath = Bundle.main.path(forResource: "Customers", ofType: "plist")
-    let dictionary = NSMutableDictionary(contentsOfFile: bundlePath)
+    let dictionary = NSMutableDictionary(contentsOfFile: bundlePath!)
     let customerlist = dictionary!["Customers"] as! NSArray
     for cust in customerlist
     {

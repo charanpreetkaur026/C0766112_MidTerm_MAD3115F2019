@@ -58,12 +58,10 @@ var obj = Singleton.getInstance()
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
          let x = obj.returnCustObject(custID: Int(indexPath.row+1))
-        let cell = tableView.dequeueReusableCell(withIdentifier: "usersCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")
         cell?.textLabel?.text = x?.fullName
         return cell!
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
-
-        return cell!
     }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Customers List"
