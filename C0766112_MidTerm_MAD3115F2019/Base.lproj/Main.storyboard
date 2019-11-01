@@ -105,7 +105,7 @@
         <!--New Customer-->
         <scene sceneID="yTT-hb-iZs">
             <objects>
-                <viewController storyboardIdentifier="customerListVC" id="Lf9-je-p1F" customClass="addNewCustomerViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Lf9-je-p1F" customClass="addNewCustomerViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCb-DS-dC9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

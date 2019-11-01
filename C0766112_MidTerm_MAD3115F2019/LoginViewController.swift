@@ -55,7 +55,7 @@ import UIKit
                                     if verifyEmailPassword(email: email, password: password) {
                                         setValueRememberMe()
                                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                        let dashboardVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! CustomerListTableViewController
+                                        let dashboardVC = storyboard.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
                                         
                                         self.navigationController?.pushViewController(dashboardVC, animated: true)
                                        
