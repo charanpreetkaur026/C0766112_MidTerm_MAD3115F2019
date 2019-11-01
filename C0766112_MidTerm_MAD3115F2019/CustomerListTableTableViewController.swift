@@ -70,7 +70,7 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     {
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
-        cell.textLabel?.text? = (temp?.fullName)!
+        cell.textLabel?.text = (temp?.fullName)!
         return cell
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }

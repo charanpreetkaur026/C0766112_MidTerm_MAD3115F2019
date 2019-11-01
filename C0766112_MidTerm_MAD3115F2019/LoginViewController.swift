@@ -21,6 +21,7 @@ import UIKit
         private var dictCustomers = [Int:Customer]()
         // Refered from Ankita
         var userDefault: UserDefaults!
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             let getData = Singleton.getInstance()
@@ -52,7 +53,7 @@ import UIKit
                     let user = cust as! NSDictionary
                     let email = user["email"]! as! String
                     let pwd = user["password"]! as! String
-                    if email==txtEmail.text! && pwd==txtPassword.text!
+                    if email == txtEmail.text! && pwd == txtPassword.text!
                     {   return true  }
                 }
             }
