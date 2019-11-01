@@ -24,7 +24,6 @@ import UIKit
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            // Do any additional setup after loading the view.
         }
         
         @IBAction func login_BTN(_ sender: UIBarButtonItem) {
@@ -60,20 +59,22 @@ import UIKit
                 }
             }
             
-        }
+     
 
 
 func verifyEmailPassword(email : String , password : String) -> Bool{
     
-    for everyCustomer in dictCustomers{
-        if (everyCustomer.email == email && everyCustomer.password == password) {
+    for cust in dictCustomers
+    {
+        if (cust.email == email && cust.password == password) {
             return true
         }
     }
     return false
 }
 func setValueRememberMe()  {
-    if btnRememberMe.isOn {
+    if btnRememberMe.isOn
+    {
         userDefault.set(self.txtEmail.text, forKey: "userEmail")
         userDefault.set(self.txtPassword.text, forKey: "userPassword")
     }else{
@@ -81,12 +82,14 @@ func setValueRememberMe()  {
         userDefault.set("", forKey: "Password")
     }
 }
-func showAlert(msg : String)  {
-    let alertController = UIAlertController(title: "CustomerBillApp", message:
+func showAlert(msg : String)
+{
+    let alertController = UIAlertController(title: "CustomerList", message:
         msg, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
     
     self.present(alertController, animated: true, completion: nil)
+    //self.present(alertController, animated: true, completion: nil)
 }
         
 //        @IBAction func btnLogin(_ sender: UIBarButtonItem) {
@@ -171,10 +174,9 @@ func showAlert(msg : String)  {
 //
 ////                            self.dictCustomers.append(Customer(customerId: id, firstName: firstName, lastName: lastName, emailId: email, password: password))
 //                        }
-                    }
-                }
 
 
         
 
 
+}

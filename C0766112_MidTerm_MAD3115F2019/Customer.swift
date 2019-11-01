@@ -17,7 +17,7 @@ class Customer{
             return "\(firstName) \(lastName)"
         }
     }
-    var emailId: String
+    var email: String
     var totalBillAmount: Float = 0.0
      //static var customerClciked = Customer()
     
@@ -32,11 +32,11 @@ class Customer{
     //billDictionary.updateValue(Bill, forKey: billId )
     
     
-    init(customerId: Int, firstName: String, lastName: String ,  emailId: String) {
+    init(customerId: Int, firstName: String, lastName: String ,  email: String) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
-        self.emailId = emailId
+        self.email = email
     }
     
 //    func addBillToCustomer(b:Bill){
