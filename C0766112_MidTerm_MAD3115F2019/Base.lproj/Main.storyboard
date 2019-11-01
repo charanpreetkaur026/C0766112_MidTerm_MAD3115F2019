@@ -148,6 +148,11 @@
                     <navigationItem key="navigationItem" title="New Customer" id="WoB-t1-nwl">
                         <barButtonItem key="rightBarButtonItem" title="save" id="Egq-wq-b7g"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="txtEmail" destination="Yc8-4K-hA4" id="yeM-qr-16I"/>
+                        <outlet property="txtFirstName" destination="U5m-BD-FNv" id="7PB-ez-dao"/>
+                        <outlet property="txtLastName" destination="5HK-e5-3hL" id="k4G-E8-W3B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2l5-Nr-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
