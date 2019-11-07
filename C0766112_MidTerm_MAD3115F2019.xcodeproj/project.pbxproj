@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A69CC0D2373E15D009C9BA6 /* iconfinder_Login_73221.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A69CC0C2373E15D009C9BA6 /* iconfinder_Login_73221.png */; };
 		9B05592C236B8C6E0056A416 /* CustomerListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05592B236B8C6E0056A416 /* CustomerListTableTableViewController.swift */; };
 		9B055930236B8C7C0056A416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05592F236B8C7C0056A416 /* LoginViewController.swift */; };
 		9B055934236B9B8A0056A416 /* Customers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B055933236B9B8A0056A416 /* Customers.plist */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A69CC0C2373E15D009C9BA6 /* iconfinder_Login_73221.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconfinder_Login_73221.png; sourceTree = "<group>"; };
 		9B05592B236B8C6E0056A416 /* CustomerListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerListTableTableViewController.swift; sourceTree = "<group>"; };
 		9B05592F236B8C7C0056A416 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B055933236B9B8A0056A416 /* Customers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Customers.plist; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				9B78F034236B3F10003C00B7 /* AppDelegate.swift */,
 				9B78F038236B3F10003C00B7 /* Main.storyboard */,
 				9B78F03B236B3F12003C00B7 /* Assets.xcassets */,
+				1A69CC0C2373E15D009C9BA6 /* iconfinder_Login_73221.png */,
 				9B55CEAB23738C0400E7A521 /* billAppIcon.png */,
 				9B78F046236B4020003C00B7 /* lambton.jpg */,
 				9B78F03D236B3F12003C00B7 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A69CC0D2373E15D009C9BA6 /* iconfinder_Login_73221.png in Resources */,
 				9B78F03F236B3F12003C00B7 /* LaunchScreen.storyboard in Resources */,
 				9B55CEAC23738C0400E7A521 /* billAppIcon.png in Resources */,
 				9B78F03C236B3F12003C00B7 /* Assets.xcassets in Resources */,
