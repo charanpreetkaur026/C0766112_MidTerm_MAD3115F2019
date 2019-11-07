@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CustomerListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CustomerListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+{
   // adding buttons
     private func addLogoutButton()
     {
@@ -34,7 +35,7 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     @objc
     func addNewCustomer(sender: UIBarButtonItem)
     {
-        print("Customer Added Successfully")
+        
         let sb1=UIStoryboard(name: "Main", bundle: nil)
         let addCustomerVC=sb1.instantiateViewController(withIdentifier: "addCustomerVC") as! addNewCustomerViewController
         navigationController?.pushViewController(addCustomerVC, animated: true)
@@ -54,16 +55,13 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         addNewCustomerButton()
         //print("This is Customer list Table View")
     }
-   // var customerDict = []
-  // var customerArray = Array<Customer>()
+  //var customerArray = Array<Customer>()
     var obj = Singleton.getInstance()
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-            return obj.returnCount()
-        
+        return obj.returnCount()
     }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -71,13 +69,16 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
         cell.textLabel?.text = (temp?.fullName)!
+//        
         return cell
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }
+
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
-        return "Customers List"
+        let header = "Customers List"
+        return header
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,26 +86,23 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         
     }
     
-//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let billListVC = sb.instantiateViewController(withIdentifier: "BillListVC") as? BillListViewController
-//        billListVC?.billdata = obj.returnCustObject(custID: indexPath.row + 1)
-//        
-//        navigationController?.pushViewController(billListVC!, animated: true)
-//    }
-//    private func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let x = obj.returnCustObject(custID: Int(indexPath.row+1))
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
-//        cell.textLabel?.text = x?.fullName
-//        return cell
-//    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+       
+        let billListVC = sb.instantiateViewController(withIdentifier: "BillListVC") as! BillDetailsViewController
+            billListVC.billdata=obj.returnCustObject(custID: indexPath.row+1); self.navigationController?.pushViewController(billListVC, animated: true)
+       
+     
+        }
+        //billListVC.billdata = obj.returnCustObject(custID: indexPath.row + 1)
+        
+        
+        
+        
+        
+    }
 
-    
-   
-
-
-
-}
 
 
 

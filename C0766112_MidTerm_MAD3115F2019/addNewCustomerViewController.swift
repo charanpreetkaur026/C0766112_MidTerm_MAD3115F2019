@@ -32,19 +32,32 @@ class addNewCustomerViewController: UIViewController {
         @objc
         func saveCustomer(sender: UIBarButtonItem)
         {
-            print("Customer Added successfully")
+            
             let story=UIStoryboard(name: "Main", bundle: nil)
             let customerListVC=story.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
             navigationController?.pushViewController(customerListVC, animated: true)
-    
+    // writing to plist
+//            readCustomerPlistFile()
+//            let data:NSData =  FileManager.defaultManager().contentsAtPath(pathForThePlistFile)!
+//            let sArray = try PropertyListSerialization.propertyListWithData(data, options: PropertyListSerialization.MutabilityOptions.MutableContainersAndLeaves, format: nil) as! NSMutableArray
+//            dictionary.addObject(self.textView.text)
+////            let encoder = PropertyListEncoder()
+//            encoder.outputFormat = .xml
+//
+//            let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Customers.plist")
+//
+//            do {
+//                let data = try encoder.encode(Customers)
+//                try data.write(to: path)
+//            } catch {
+//                print(error)
+//            }
+            
+            
+            
+            
             let firstName = txtFirstName.text
             let lastName = txtLastName.text
-//            func  isValidEmail() -> Bool
-//            {
-//                let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-//                let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-//                return emailTest.evaluate(with: self)
-//            }
             if (txtEmail.text?.isValidEmail())!
             {
                 

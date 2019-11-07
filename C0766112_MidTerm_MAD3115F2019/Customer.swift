@@ -8,6 +8,7 @@
 
 import Foundation
 class Customer{
+    
     var customerId: Int
     var firstName: String
     var lastName: String
@@ -20,15 +21,39 @@ class Customer{
     var email: String
     var totalBillAmount: Float = 0.0
     
+     static var activeCustomer = Customer()
     
+    //var billDictionary = [Int:Bill]()
     
-    init(customerId: Int, firstName: String, lastName: String ,  email: String) {
+
+//    var TotalAmountToPay: Float
+//    {
+//        var TotalAmount: Float = 0.0
+//
+//        for bill in billDictionary//arrayBill
+//        {
+//            TotalAmount = TotalAmount + bill.totalBillAmount
+//        }
+//        return TotalAmount
+//    }
+    
+    init(){
+        self.customerId = Int()
+        self.firstName = String()
+        self.lastName = String()
+        self.email = String()
+    }
+        
+        
+        init(customerId: Int, firstName: String, lastName: String ,  email: String) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+        
     }
-    
+    }
+
 //    func addBillToCustomer(b:Bill){
 //        billDictionary.updateValue(b, forKey: b.billId)
 //    }
@@ -74,4 +99,4 @@ class Customer{
 //
 //
 //    }
-}
+
