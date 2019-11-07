@@ -61,12 +61,6 @@ class Singleton: NSObject
          AddCustomertoDict(customer: cust4)
         let cust5 = Customer(customerId: 5, firstName: "Simran", lastName: "singh", email: "simran@gmail.com ")
             AddCustomertoDict(customer: cust5)
-        
-        
-       
-       
-    
-        
     }
     
     
