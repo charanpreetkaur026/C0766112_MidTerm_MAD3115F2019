@@ -85,7 +85,7 @@ import UIKit
                         showAlert(msg: "Please enter valid email")
                     }
                 }else{
-                    showAlert(msg: "Please enter useremail")
+                    showAlert(msg: "Please enter email")
                 }
             }}
             
@@ -120,7 +120,7 @@ func setValueRememberMe()  {
 }
 func showAlert(msg : String)
 {
-    let alertController = UIAlertController(title: "CustomerList", message:
+    let alertController = UIAlertController(title: "Logging in", message:
         msg, preferredStyle: .alert)
     alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
     

@@ -12,7 +12,7 @@ class addNewCustomerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        saveCustomerButton()
         // Do any additional setup after loading the view.
     }
         let obj = Singleton.getInstance()

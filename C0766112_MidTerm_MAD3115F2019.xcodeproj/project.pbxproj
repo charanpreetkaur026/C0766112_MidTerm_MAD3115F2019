@@ -10,6 +10,7 @@
 		9B05592C236B8C6E0056A416 /* CustomerListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05592B236B8C6E0056A416 /* CustomerListTableTableViewController.swift */; };
 		9B055930236B8C7C0056A416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05592F236B8C7C0056A416 /* LoginViewController.swift */; };
 		9B055934236B9B8A0056A416 /* Customers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B055933236B9B8A0056A416 /* Customers.plist */; };
+		9B55CEAC23738C0400E7A521 /* billAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B55CEAB23738C0400E7A521 /* billAppIcon.png */; };
 		9B78F035236B3F10003C00B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B78F034236B3F10003C00B7 /* AppDelegate.swift */; };
 		9B78F03A236B3F10003C00B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B78F038236B3F10003C00B7 /* Main.storyboard */; };
 		9B78F03C236B3F12003C00B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B78F03B236B3F12003C00B7 /* Assets.xcassets */; };
@@ -29,7 +30,8 @@
 		9B05592B236B8C6E0056A416 /* CustomerListTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerListTableTableViewController.swift; sourceTree = "<group>"; };
 		9B05592F236B8C7C0056A416 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9B055933236B9B8A0056A416 /* Customers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Customers.plist; sourceTree = "<group>"; };
-		9B78F031236B3F10003C00B7 /* C0766112_MidTerm_MAD3115F2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = C0766112_MidTerm_MAD3115F2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B55CEAB23738C0400E7A521 /* billAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billAppIcon.png; sourceTree = "<group>"; };
+		9B78F031236B3F10003C00B7 /* C0766112-MidTerm-MAD3115F2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "C0766112-MidTerm-MAD3115F2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B78F034236B3F10003C00B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B78F039236B3F10003C00B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9B78F03B236B3F12003C00B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +70,7 @@
 		9B78F032236B3F10003C00B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B78F031236B3F10003C00B7 /* C0766112_MidTerm_MAD3115F2019.app */,
+				9B78F031236B3F10003C00B7 /* C0766112-MidTerm-MAD3115F2019.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 				9B78F034236B3F10003C00B7 /* AppDelegate.swift */,
 				9B78F038236B3F10003C00B7 /* Main.storyboard */,
 				9B78F03B236B3F12003C00B7 /* Assets.xcassets */,
+				9B55CEAB23738C0400E7A521 /* billAppIcon.png */,
 				9B78F046236B4020003C00B7 /* lambton.jpg */,
 				9B78F03D236B3F12003C00B7 /* LaunchScreen.storyboard */,
 				9B78F040236B3F12003C00B7 /* Info.plist */,
@@ -114,7 +117,7 @@
 			);
 			name = C0766112_MidTerm_MAD3115F2019;
 			productName = C0766112_MidTerm_MAD3115F2019;
-			productReference = 9B78F031236B3F10003C00B7 /* C0766112_MidTerm_MAD3115F2019.app */;
+			productReference = 9B78F031236B3F10003C00B7 /* C0766112-MidTerm-MAD3115F2019.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B78F03F236B3F12003C00B7 /* LaunchScreen.storyboard in Resources */,
+				9B55CEAC23738C0400E7A521 /* billAppIcon.png in Resources */,
 				9B78F03C236B3F12003C00B7 /* Assets.xcassets in Resources */,
 				9B78F03A236B3F10003C00B7 /* Main.storyboard in Resources */,
 				9B78F047236B4020003C00B7 /* lambton.jpg in Resources */,
@@ -333,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "CestarCollege.C0766112-MidTerm-MAD3115F2019";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C0766112-MidTerm-MAD3115F2019";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "CestarCollege.C0766112-MidTerm-MAD3115F2019";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "C0766112-MidTerm-MAD3115F2019";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
