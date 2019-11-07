@@ -177,7 +177,6 @@
                         <viewLayoutGuide key="safeArea" id="HCF-Gv-mDR"/>
                     </view>
                     <connections>
-                        <outlet property="billsTable" destination="Iss-8e-WKy" id="7ZR-xq-wZQ"/>
                         <outlet property="lblCustomerDetail" destination="Usr-cp-goi" id="Wk9-qw-fOD"/>
                     </connections>
                 </viewController>
