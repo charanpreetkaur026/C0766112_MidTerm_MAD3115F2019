@@ -8,9 +8,33 @@
 
 import UIKit
 
-class BillDetailsViewController:UIViewController {
+class BillDetailsViewController:UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var obj = Singleton.getInstance()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (billdata?.billDictionary.count)!
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+        let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
+    //   let activeCustomerBill = billdata.activeCustomer.billDictionary[indexPath.row]
+        //let billDetails: String = ""
+//        cell.textLabel?.text = "Bill ID : \(String(describing: activeCustomerBill?.billId)) \nBill Date : \(String(describing: activeCustomerBill?.billDate)) \nBill Type : \(String(describing: activeCustomerBill?.billType)) \nBill Total : \(String(describing: activeCustomerBill?.billAmount))"
+        
+        return cell
+        
+    }
 
-    //@IBOutlet weak var billsTable: UIViewController!
+
+   
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        let header = "Bill Details"
+        return header
+    }
+    
 
     
     var billdata : Customer? = nil
@@ -31,14 +55,12 @@ class BillDetailsViewController:UIViewController {
         super.viewDidLoad()
 //        customerTable.delegate=self
 //        customerTable.dataSource=self
-        navigationItem.hidesBackButton=true
+        //navigationItem.hidesBackButton=true
         lblCustomerId.text = billdata?.customerId.castString()
         lblCustomerDetail.text = billdata?.fullName
         lblCustomerEmail.text = billdata?.email
         lblTotalAmount.text = billdata?.totalBillAmount.currencyFormat()
         
-        
-    
     }
    
 

@@ -52,37 +52,4 @@ class Customer{
         }
         return Float(totalBillAmount)
     }
-    
-//    func display() {
-//        print("\t")
-//        print("------CUSTOMER INFORMATION---------")
-//        print("Customer ID: \(customerId)")
-//        print("Customer Name: \(fullName)")
-//        print("Email Id: \(emailId)")
-//        // print("Customer ID: \(customerId)")
-//
-//
-//        print("------BILL INFORMATION---------")
-//        print("*********************************************")
-//        if billDictionary.isEmpty
-//        {
-//            print(" This Customer has no Bills to pay")
-//        }
-//        else
-//        {
-//            for b in billDictionary.values
-//
-//            {
-//                b.display()
-//                print("*****************************************")
-//
-//            }
-//            print("Total Bill Amount to Pay: \(calcTotalBillAmount().currencyFormat())")
-//            print("########################################")
-//
-//        }
-//
-//
-//    }
-
 }
