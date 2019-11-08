@@ -103,11 +103,11 @@ func verifyEmailPassword(email : String , password : String) -> Bool{
 func setValueRememberMe()  {
     if btnRememberMe.isOn
     {
-        userDefault.set(self.txtEmail.text, forKey: "userEmail")
-        userDefault.set(self.txtPassword.text, forKey: "userPassword")
+        self.userDefault.set(txtEmail.text, forKey: "userEmail")
+        self.userDefault.set(txtPassword.text, forKey: "userPassword")
     }else{
-        userDefault.set("", forKey: "Email")
-        userDefault.set("", forKey: "Password")
+        self.userDefault.set("", forKey: "Email")
+        self.userDefault.set("", forKey: "Password")
     }
 }
 func showAlert(msg : String)

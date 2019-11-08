@@ -149,7 +149,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2l5-Nr-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4718.840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="4622" y="-282"/>
+        </scene>
+        <!--Add New Bill View Controller-->
+        <scene sceneID="Kvb-mC-0gL">
+            <objects>
+                <viewController storyboardIdentifier="newBillVC" id="SCE-Gg-i1D" customClass="addNewBillViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ZM-PP-Wst">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-OT-ed0">
+                                <rect key="frame" x="8" y="74" width="398" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeg-nT-g1g">
+                                <rect key="frame" x="8" y="112" width="398" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOj-iO-Tx8">
+                                <rect key="frame" x="8" y="150" width="398" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Bill Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5kw-Og-kyM">
+                                <rect key="frame" x="8" y="188" width="398" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="leading" secondItem="hcb-L3-3cx" secondAttribute="leading" constant="8" id="2X7-EE-iVa"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="trailing" secondItem="HOj-iO-Tx8" secondAttribute="trailing" id="3Ik-i1-WFB"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="leading" secondItem="jeg-nT-g1g" secondAttribute="leading" id="8QS-9C-I37"/>
+                            <constraint firstItem="HOj-iO-Tx8" firstAttribute="top" secondItem="jeg-nT-g1g" secondAttribute="bottom" constant="8" symbolic="YES" id="MKV-vn-5tz"/>
+                            <constraint firstItem="jeg-nT-g1g" firstAttribute="top" secondItem="Pf7-OT-ed0" secondAttribute="bottom" constant="8" symbolic="YES" id="ahJ-Pd-Sm4"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="centerX" secondItem="4ZM-PP-Wst" secondAttribute="centerX" id="fum-F6-C62"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="leading" secondItem="5kw-Og-kyM" secondAttribute="leading" id="gLW-1U-emJ"/>
+                            <constraint firstItem="5kw-Og-kyM" firstAttribute="top" secondItem="HOj-iO-Tx8" secondAttribute="bottom" constant="8" symbolic="YES" id="rjz-rf-qGR"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="trailing" secondItem="jeg-nT-g1g" secondAttribute="trailing" id="s86-24-qbC"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="trailing" secondItem="5kw-Og-kyM" secondAttribute="trailing" id="tD0-m3-vHq"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="leading" secondItem="HOj-iO-Tx8" secondAttribute="leading" id="w7D-19-Ljn"/>
+                            <constraint firstItem="Pf7-OT-ed0" firstAttribute="top" secondItem="hcb-L3-3cx" secondAttribute="top" constant="30" id="xLi-qT-h42"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hcb-L3-3cx"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtBillAmount" destination="5kw-Og-kyM" id="UXy-x1-wEc"/>
+                        <outlet property="txtBillDate" destination="jeg-nT-g1g" id="Oi9-a4-leh"/>
+                        <outlet property="txtBillType" destination="HOj-iO-Tx8" id="aAB-In-xEy"/>
+                        <outlet property="txtBillid" destination="Pf7-OT-ed0" id="a0y-hN-WWt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3V-O7-pTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4652.1739130434789" y="373.66071428571428"/>
         </scene>
         <!--Bill Details-->
         <scene sceneID="h1e-nB-TOT">

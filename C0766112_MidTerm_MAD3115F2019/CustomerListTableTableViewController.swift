@@ -19,9 +19,9 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     }
     private func addNewCustomerButton()
     {
-        let btnLogout=UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(CustomerListTableViewController.addNewCustomer(sender:)))
+        let btnNewCustomer=UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(CustomerListTableViewController.addNewCustomer(sender:)))
         
-        navigationItem.rightBarButtonItem=btnLogout
+        navigationItem.rightBarButtonItem=btnNewCustomer
     }
     
     // navigating through buttons
@@ -68,8 +68,7 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     {
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell", for: indexPath)
-        cell.textLabel?.text = (temp?.fullName)!
-//        
+        cell.textLabel?.text = (temp?.fullName)!       
         return cell
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }
@@ -85,8 +84,15 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         customerTable.reloadData()
         
     }
-    
+    //let temp = obj.returnCustObject(custID: Int(IndexPath.row+1))
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
+        Customer.activeCustomer.customerId = temp!.customerId
+        Customer.activeCustomer.firstName = temp!.firstName
+        Customer.activeCustomer.lastName = temp!.lastName
+        //Customer.activeCustomer.fullName = temp!.fullName
+        Customer.activeCustomer.totalBillAmount = temp!.totalBillAmount
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
        

@@ -17,6 +17,7 @@
 		9B78F03C236B3F12003C00B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B78F03B236B3F12003C00B7 /* Assets.xcassets */; };
 		9B78F03F236B3F12003C00B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B78F03D236B3F12003C00B7 /* LaunchScreen.storyboard */; };
 		9B78F047236B4020003C00B7 /* lambton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B78F046236B4020003C00B7 /* lambton.jpg */; };
+		9B9381342375EF7D00F486F7 /* addNewBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9381332375EF7D00F486F7 /* addNewBillViewController.swift */; };
 		9BBFDD422375033300751CA6 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBFDD412375033300751CA6 /* Bill.swift */; };
 		9BBFDD442375033A00751CA6 /* Mobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBFDD432375033A00751CA6 /* Mobile.swift */; };
 		9BBFDD462375034000751CA6 /* Hydro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBFDD452375034000751CA6 /* Hydro.swift */; };
@@ -44,6 +45,7 @@
 		9B78F03E236B3F12003C00B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B78F040236B3F12003C00B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B78F046236B4020003C00B7 /* lambton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lambton.jpg; sourceTree = "<group>"; };
+		9B9381332375EF7D00F486F7 /* addNewBillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewBillViewController.swift; sourceTree = "<group>"; };
 		9BBFDD412375033300751CA6 /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		9BBFDD432375033A00751CA6 /* Mobile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mobile.swift; sourceTree = "<group>"; };
 		9BBFDD452375034000751CA6 /* Hydro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hydro.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				9BEF7DF4236C98A300A0F494 /* Singleton.swift */,
 				9BEF7DF6236CA97F00A0F494 /* addNewCustomerViewController.swift */,
 				9BEF7DF8236CC1C600A0F494 /* BillDetailsViewController.swift */,
+				9B9381332375EF7D00F486F7 /* addNewBillViewController.swift */,
 			);
 			path = C0766112_MidTerm_MAD3115F2019;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				9BEF7DEF236C95D300A0F494 /* extension+Date.swift in Sources */,
 				9BEF7DF7236CA97F00A0F494 /* addNewCustomerViewController.swift in Sources */,
 				9BBFDD442375033A00751CA6 /* Mobile.swift in Sources */,
+				9B9381342375EF7D00F486F7 /* addNewBillViewController.swift in Sources */,
 				9BEF7DF9236CC1C600A0F494 /* BillDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

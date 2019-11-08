@@ -19,6 +19,7 @@ class Customer{
     var totalBillAmount: Float = 0.0
     static var activeCustomer = Customer()
     var billDictionary = [Int:Bill]()
+     //var arrayBill : [Bill]
 //    var TotalAmountToPay: Float
 //    {
 //        var TotalAmount: Float = 0.0
@@ -33,15 +34,18 @@ class Customer{
         self.firstName = String()
         self.lastName = String()
         self.email = String()
+//        self.arrayBill = Array()
     }
     init(customerId: Int, firstName: String, lastName: String ,  email: String) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+        
     }
     func addBillToCustomer(b:Bill){
         billDictionary.updateValue(b, forKey: b.billId)
+        print("BillDictionary:  \(billDictionary)")
     }
     func calcTotalBillAmount() -> Float
     {
