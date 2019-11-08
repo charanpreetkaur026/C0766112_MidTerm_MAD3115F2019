@@ -86,7 +86,7 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
        

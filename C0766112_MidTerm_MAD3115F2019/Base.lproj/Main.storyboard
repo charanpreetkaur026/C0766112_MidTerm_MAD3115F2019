@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCc-Da-RMe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCc-Da-RMe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -139,50 +139,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2l5-Nr-gsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4038" y="-257"/>
+            <point key="canvasLocation" x="4720" y="139"/>
         </scene>
-        <!--Bill Details View Controller-->
+        <!--Bill Details-->
         <scene sceneID="h1e-nB-TOT">
             <objects>
-                <viewController storyboardIdentifier="BillListVC" id="O5S-st-jUQ" customClass="BillDetailsViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BillListVC" title="Bill Details" id="O5S-st-jUQ" customClass="BillDetailsViewController" customModule="C0766112_MidTerm_MAD3115F2019" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tPA-AV-9h2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIz-y8-Jr0">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIz-y8-Jr0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Bill Details" id="E8I-b1-F1A">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="BmX-n6-fZi"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Avq-ns-8Bl"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Add Bill" id="TLR-cx-Cks"/>
-                                    </navigationItem>
-                                </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-cp-goi">
-                                <rect key="frame" x="20" y="104" width="365" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CustomerName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usr-cp-goi">
+                                <rect key="frame" x="8" y="125" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="EmailCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iss-8e-WKy">
-                                <rect key="frame" x="20" y="354" width="374" height="459"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kao-WY-sPk">
+                                <rect key="frame" x="8" y="153.5" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount to Pay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nK-2W-2nc">
+                                <rect key="frame" x="8" y="182.5" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EmailCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iss-8e-WKy">
+                                <rect key="frame" x="8" y="340" width="398" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="514" id="PQw-sA-zwq"/>
+                                </constraints>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="customerID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgX-VA-Bhq">
+                                <rect key="frame" x="8" y="96" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8nK-2W-2nc" firstAttribute="top" secondItem="kao-WY-sPk" secondAttribute="bottom" constant="8" id="2TI-EN-bpA"/>
+                            <constraint firstItem="kao-WY-sPk" firstAttribute="top" secondItem="Usr-cp-goi" secondAttribute="bottom" constant="8" id="6R3-zb-nNq"/>
+                            <constraint firstItem="8nK-2W-2nc" firstAttribute="leading" secondItem="kao-WY-sPk" secondAttribute="leading" id="6tR-BW-iRd"/>
+                            <constraint firstItem="Usr-cp-goi" firstAttribute="leading" secondItem="CgX-VA-Bhq" secondAttribute="leading" id="9Rz-aR-eq8"/>
+                            <constraint firstItem="Iss-8e-WKy" firstAttribute="leading" secondItem="HCF-Gv-mDR" secondAttribute="leading" constant="8" id="BPb-wV-ghw"/>
+                            <constraint firstItem="8nK-2W-2nc" firstAttribute="trailing" secondItem="kao-WY-sPk" secondAttribute="trailing" id="CMp-E8-2EB"/>
+                            <constraint firstItem="ZIz-y8-Jr0" firstAttribute="top" secondItem="HCF-Gv-mDR" secondAttribute="top" id="FJq-CT-5jH"/>
+                            <constraint firstItem="Iss-8e-WKy" firstAttribute="centerX" secondItem="ZIz-y8-Jr0" secondAttribute="centerX" id="GH3-19-6Y3"/>
+                            <constraint firstItem="8nK-2W-2nc" firstAttribute="trailing" secondItem="Usr-cp-goi" secondAttribute="trailing" id="MTc-RN-Up5"/>
+                            <constraint firstItem="CgX-VA-Bhq" firstAttribute="leading" secondItem="HCF-Gv-mDR" secondAttribute="leading" constant="8" id="NnQ-ja-PYu"/>
+                            <constraint firstItem="8nK-2W-2nc" firstAttribute="leading" secondItem="Usr-cp-goi" secondAttribute="leading" id="PKG-Wm-ZO1"/>
+                            <constraint firstItem="HCF-Gv-mDR" firstAttribute="bottom" secondItem="Iss-8e-WKy" secondAttribute="bottom" constant="8" id="QJD-ib-2D6"/>
+                            <constraint firstItem="CgX-VA-Bhq" firstAttribute="top" secondItem="ZIz-y8-Jr0" secondAttribute="bottom" constant="8" id="fCe-Zw-9eT"/>
+                            <constraint firstItem="Usr-cp-goi" firstAttribute="top" secondItem="CgX-VA-Bhq" secondAttribute="bottom" constant="8" id="iU0-ER-E30"/>
+                            <constraint firstItem="ZIz-y8-Jr0" firstAttribute="leading" secondItem="HCF-Gv-mDR" secondAttribute="leading" id="mvm-MX-nrg"/>
+                            <constraint firstItem="HCF-Gv-mDR" firstAttribute="trailing" secondItem="CgX-VA-Bhq" secondAttribute="trailing" constant="8" id="oM9-f4-2yz"/>
+                            <constraint firstItem="HCF-Gv-mDR" firstAttribute="trailing" secondItem="Iss-8e-WKy" secondAttribute="trailing" constant="8" id="ocu-kX-b5F"/>
+                            <constraint firstItem="Usr-cp-goi" firstAttribute="trailing" secondItem="CgX-VA-Bhq" secondAttribute="trailing" id="xkc-qv-mxg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HCF-Gv-mDR"/>
                     </view>
                     <connections>
+                        <outlet property="billTableView" destination="Iss-8e-WKy" id="m86-Z6-oMc"/>
                         <outlet property="lblCustomerDetail" destination="Usr-cp-goi" id="Wk9-qw-fOD"/>
+                        <outlet property="lblCustomerEmail" destination="kao-WY-sPk" id="mtk-Oq-asf"/>
+                        <outlet property="lblCustomerId" destination="CgX-VA-Bhq" id="TXb-8D-MaM"/>
+                        <outlet property="lblTotalAmount" destination="8nK-2W-2nc" id="35n-Um-8f2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfW-aK-MaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4063.7681159420295" y="458.70535714285711"/>
+            <point key="canvasLocation" x="3982.6086956521744" y="138.61607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SSw-5t-50q">

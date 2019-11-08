@@ -8,65 +8,50 @@
 
 import Foundation
 class Customer{
-    
     var customerId: Int
     var firstName: String
     var lastName: String
     var fullName: String
     {
-        get{
-            return "\(firstName) \(lastName)"
-        }
+        get{  return "\(firstName) \(lastName)"  }
     }
     var email: String
     var totalBillAmount: Float = 0.0
-    
-     static var activeCustomer = Customer()
-    
-    //var billDictionary = [Int:Bill]()
-    
-
+    static var activeCustomer = Customer()
+    var billDictionary = [Int:Bill]()
 //    var TotalAmountToPay: Float
 //    {
 //        var TotalAmount: Float = 0.0
-//
 //        for bill in billDictionary//arrayBill
 //        {
 //            TotalAmount = TotalAmount + bill.totalBillAmount
 //        }
 //        return TotalAmount
 //    }
-    
     init(){
         self.customerId = Int()
         self.firstName = String()
         self.lastName = String()
         self.email = String()
     }
-        
-        
-        init(customerId: Int, firstName: String, lastName: String ,  email: String) {
+    init(customerId: Int, firstName: String, lastName: String ,  email: String) {
         self.customerId = customerId
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
-        
     }
+    func addBillToCustomer(b:Bill){
+        billDictionary.updateValue(b, forKey: b.billId)
     }
-
-//    func addBillToCustomer(b:Bill){
-//        billDictionary.updateValue(b, forKey: b.billId)
-//    }
-//    
-//    func calcTotalBillAmount() -> Float
-//    {
-//        //totalBillAmount = 0
-//        for i in billDictionary.values
-//        {
-//            totalBillAmount += i.billAmount
-//        }
-//        return Float(totalBillAmount)
-//    }
+    func calcTotalBillAmount() -> Float
+    {
+        totalBillAmount = 0
+        for i in billDictionary.values
+        {
+            totalBillAmount += i.billAmount
+        }
+        return Float(totalBillAmount)
+    }
     
 //    func display() {
 //        print("\t")
@@ -100,3 +85,4 @@ class Customer{
 //
 //    }
 
+}
