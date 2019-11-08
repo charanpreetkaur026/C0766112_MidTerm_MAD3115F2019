@@ -17,13 +17,28 @@ class BillDetailsViewController:UIViewController {
    // @IBOutlet weak var bills: UILabel!
     
     @IBOutlet weak var lblCustomerDetail: UILabel!
-    override func viewDidLoad() {
+    @IBOutlet weak var lblCustomerId: UILabel!
+   
+    @IBOutlet weak var lblCustomerEmail: UILabel!
+    
+    @IBOutlet weak var lblTotalAmount: UILabel!
+    
+    @IBOutlet weak var billTableView: UITableView!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+//        customerTable.delegate=self
+//        customerTable.dataSource=self
+        navigationItem.hidesBackButton=true
+        lblCustomerId.text = billdata?.customerId.castString()
         lblCustomerDetail.text = billdata?.fullName
-       // billsTable.delegate=self
-        //billsTable.dataSource=self
+        lblCustomerEmail.text = billdata?.email
+        lblTotalAmount.text = billdata?.totalBillAmount.currencyFormat()
         
-        // Do any additional setup after loading the view.
+        
+    
     }
    
 

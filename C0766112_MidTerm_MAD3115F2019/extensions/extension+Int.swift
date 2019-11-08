@@ -20,6 +20,10 @@ extension Int{
     {
         return " \(self) Minutes"
     }
+    func castString() -> String
+    {
+        return String(self)
+    }
     
     
 }

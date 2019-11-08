@@ -62,36 +62,28 @@ import UIKit
         
         
         @IBAction func login_BTN(_ sender: UIBarButtonItem) {
-            if let email = txtEmail.text{
-                if !email.isEmpty{
-                    
-                    if email.isValidEmail(){
-                        if let password = txtPassword.text{
-                                    if verifyEmailPassword(email: email, password: password) {
-                                        setValueRememberMe()
-                                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                        let dashboardVC = storyboard.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
-                                        
-                                        self.navigationController?.pushViewController(dashboardVC, animated: true)
-                                       
-                                    }else{
-                                            showAlert(msg: "You have enter wrong credentials")
-                                        }
-                                
-                            }else{
-                                showAlert(msg: "Please enter password")
-                            }
-                    }else{
-                        showAlert(msg: "Please enter valid email")
-                    }
-                }else{
-                    showAlert(msg: "Please enter email")
-                }
-            }}
-            
-     
-
-
+        if let email = txtEmail.text{
+         if !email.isEmpty{
+           if email.isValidEmail(){
+             if let password = txtPassword.text{
+               if verifyEmailPassword(email: email, password: password) {
+                  setValueRememberMe()
+                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                  let dashboardVC = storyboard.instantiateViewController(withIdentifier: "customerListVC") as! CustomerListTableViewController
+    self.navigationController?.pushViewController(dashboardVC, animated: true)
+    }else{
+        showAlert(msg: "You have enter wrong credentials")
+    }
+    }else{
+        showAlert(msg: "Please enter password")
+    }
+    }else{
+        showAlert(msg: "Please enter valid email")
+    }
+    }else{
+        showAlert(msg: "Please enter email")
+    }
+    }}
 func verifyEmailPassword(email : String , password : String) -> Bool{
    let bundlePath = Bundle.main.path(forResource: "Customers", ofType: "plist")
     let dictionary = NSMutableDictionary(contentsOfFile: bundlePath!)
