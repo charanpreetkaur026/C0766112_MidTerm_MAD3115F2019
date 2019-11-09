@@ -44,9 +44,9 @@ class Singleton: NSObject
          AddCustomertoDict(customer: cust4)
         let cust5 = Customer(customerId: 5, firstName: "Simran", lastName: "singh", email: "simran@gmail.com ")
             AddCustomertoDict(customer: cust5)
-        let bill1 = Mobile(billId: 101, billDate: "25-11-2010", billType: .Mobile, billAmount: 250.00, mobileManufacturer: "Samsung", plan: "Talk + Internet", mobileNum: 1231231231, internetUsed: 5, minutesUsed: 500)
-        let bill2 = Internet(billId: 201, billDate: "11-11-2011", billType: .Mobile, billAmount: 200.0, providerName: "Rogers", internetUsed: Int(820.0))
-        let bill3 = Hydro(billId: 301, billDate: "12-12-2012", billType: .Hydro, billAmount: 450.00, agency: "Tronto Hydro Services inc.", unitsConsumed: 120)
+        let bill1 = Mobile(billId: 1, billDate: "25-11-2010", billType: .Mobile, billAmount: 250.00, mobileManufacturer: "Samsung", plan: "Talk + Internet", mobileNum: 1231231231, internetUsed: 5, minutesUsed: 500)
+        let bill2 = Internet(billId: 2, billDate: "11-11-2011", billType: .Mobile, billAmount: 200.0, providerName: "Rogers", internetUsed: Int(820.0))
+        let bill3 = Hydro(billId: 3, billDate: "12-12-2012", billType: .Hydro, billAmount: 450.00, agency: "Tronto Hydro Services inc.", unitsConsumed: 120)
         
         
 //        let cust1 = Customer(customerId: 1, firstName: "Charan", lastName: "kaur", email: "charan@gmail.com", bills:[bill1.billId: bill1 , bill2.billId: bill2])
@@ -56,12 +56,12 @@ class Singleton: NSObject
         AddCustomertoDict(customer: cust2)
         AddCustomertoDict(customer: cust3)
  
-        cust1.addBillToCustomer(b: bill3)
-        cust1.addBillToCustomer(b: bill2)
         cust1.addBillToCustomer(b: bill1)
-        cust2.addBillToCustomer(b: bill3)
-        cust3.addBillToCustomer(b: bill3)
-        cust2.addBillToCustomer(b: bill1)
+        cust1.addBillToCustomer(b: bill2)
+        cust1.addBillToCustomer(b: bill3)
+//        cust2.addBillToCustomer(b: bill3)
+//        cust3.addBillToCustomer(b: bill3)
+//        cust2.addBillToCustomer(b: bill1)
         //print("cust: \(cust1.billDictionary.)")
     }
     func AddCustomertoDict(customer: Customer)
