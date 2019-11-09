@@ -25,7 +25,9 @@ class addNewBillViewController: UIViewController {
     {
         let btnAddBill=UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addNewBillViewController.addBill(sender:)))
         navigationItem.rightBarButtonItem = btnAddBill
-        
+        let story=UIStoryboard(name: "Main", bundle: nil)
+        let BillListVC=story.instantiateViewController(withIdentifier: "customerListVC") as! BillDetailsViewController
+        navigationController?.pushViewController(BillListVC, animated: true)
     }
     
     
