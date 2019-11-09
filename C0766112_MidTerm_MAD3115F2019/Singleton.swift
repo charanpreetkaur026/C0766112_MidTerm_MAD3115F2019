@@ -48,10 +48,7 @@ class Singleton: NSObject
         let bill2 = Internet(billId: 2, billDate: "11-11-2011", billType: .Mobile, billAmount: 200.0, providerName: "Rogers", internetUsed: Int(820.0))
         let bill3 = Hydro(billId: 3, billDate: "12-12-2012", billType: .Hydro, billAmount: 450.00, agency: "Tronto Hydro Services inc.", unitsConsumed: 120)
         
-        
-//        let cust1 = Customer(customerId: 1, firstName: "Charan", lastName: "kaur", email: "charan@gmail.com", bills:[bill1.billId: bill1 , bill2.billId: bill2])
-//        let cust2 = Customer(customerId: 2, firstName: "Preet", lastName: "kaur", email: "preet@gmail.com", bills:[bill1.billId: bill1 , bill3.billId: bill3, bill2.billId: bill2])
-//        let cust3 = Customer(customerId: 3, firstName: "Simran", lastName: "Singh", email: "simran@gmail.com", bills:[bill1.billId: bill1])
+
         AddCustomertoDict(customer: cust1)
         AddCustomertoDict(customer: cust2)
         AddCustomertoDict(customer: cust3)
@@ -59,9 +56,9 @@ class Singleton: NSObject
         cust1.addBillToCustomer(b: bill1)
         cust1.addBillToCustomer(b: bill2)
         cust1.addBillToCustomer(b: bill3)
-//        cust2.addBillToCustomer(b: bill3)
-//        cust3.addBillToCustomer(b: bill3)
-//        cust2.addBillToCustomer(b: bill1)
+        cust2.addBillToCustomer(b: bill2)
+        cust3.addBillToCustomer(b: bill1)
+        cust2.addBillToCustomer(b: bill1)
         //print("cust: \(cust1.billDictionary.)")
     }
     func AddCustomertoDict(customer: Customer)

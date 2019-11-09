@@ -37,14 +37,14 @@ class Customer{
     func addBillToCustomer(b:Bill)
     {
         billDictionary.updateValue(b, forKey: b.billId)
-        //print("BillDictionary:  \(billDictionary)")
+        print("BillDictionary:  \(billDictionary)")
     }
     func calcTotalBillAmount() -> Float
     {
         totalBillAmount = 0
         for i in billDictionary.values
         {
-            totalBillAmount += i.billAmount
+            totalBillAmount = totalBillAmount + i.billAmount
         }
         return Float(totalBillAmount)
     }

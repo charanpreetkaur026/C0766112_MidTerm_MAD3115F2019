@@ -1,7 +1,7 @@
 import UIKit
 class BillDetailsViewController:UIViewController, UITableViewDelegate, UITableViewDataSource {
     var obj = Singleton.getInstance()
-    var billdata : Customer? = nil
+    var billdata : Customer?
     @IBOutlet weak var lblCustomerDetail: UILabel!
     @IBOutlet weak var lblCustomerId: UILabel!
     @IBOutlet weak var lblCustomerEmail: UILabel!
@@ -43,7 +43,7 @@ class BillDetailsViewController:UIViewController, UITableViewDelegate, UITableVi
    
        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
       let activeCustomerBill = billdata!.billDictionary[indexPath.row + 1]
-    var typeDetail = ""
+    let typeDetail = ""
 //    if activeCustomerBill?.billType == Bill.billTypes.Mobile{
 //            cell.textLabel?.numberOfLines = 12
 //            let mobileBill = activeCustomerBill as! Mobile
@@ -61,9 +61,10 @@ class BillDetailsViewController:UIViewController, UITableViewDelegate, UITableVi
 //                }
 //            }
 //    }
-    cell.textLabel?.text = "Bill ID : \(String(describing: activeCustomerBill!.billId)) \n Bill Date : \(String(describing: activeCustomerBill!.billDate)) \n Bill Type : \(String(describing: activeCustomerBill!.billType)) \n Bill Total : \(String(describing: activeCustomerBill!.billAmount))\n \(typeDetail)"
+    cell.textLabel?.text = "Bill ID : \(String(describing: activeCustomerBill!.billId)) \n Bill Date : \(String(describing: activeCustomerBill?.billDate)) \n Bill Type : \( activeCustomerBill!.billType) \n Bill Total : \(activeCustomerBill!.billAmount)\n \(typeDetail)"
        return cell
    }
+    
    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
    {
        let header = "Bill Details"

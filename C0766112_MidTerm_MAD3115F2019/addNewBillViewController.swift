@@ -25,6 +25,7 @@ class addNewBillViewController: UIViewController {
     {
         let btnAddBill=UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(addNewBillViewController.addBill(sender:)))
         navigationItem.rightBarButtonItem = btnAddBill
+        
     }
     
     
