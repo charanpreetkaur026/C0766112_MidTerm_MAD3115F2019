@@ -44,24 +44,24 @@ class BillDetailsViewController:UIViewController, UITableViewDelegate, UITableVi
        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
       let activeCustomerBill = billdata!.billDictionary[indexPath.row + 1]
     var typeDetail = ""
-//    if activeCustomerBill?.billType == billTypes.{
+//    if activeCustomerBill?.billType == Bill.billTypes.Mobile{
 //            cell.textLabel?.numberOfLines = 12
 //            let mobileBill = activeCustomerBill as! Mobile
 //            typeDetail = "\nBill Type : Mobile \nManufacturer Name : \(mobileBill.mobileManufacturer) \nPlan Name : \(mobileBill.plan) \nMobile Number : \(mobileBill.mobileNum) \nInternet used : \(mobileBill.internetUsed.conactGB()) \nMinutes Used : \(mobileBill.minutesUsed.concatMin()) "
 //        } else {
-//            if activeCustomerBill?.billType == billTypes.Hydro{
+//        if activeCustomerBill?.billType == Bill.billTypes.Hydro{
 //                cell.textLabel?.numberOfLines = 12
 //                let hydroBill = activeCustomerBill as! Hydro
 //                typeDetail = "\nBill Type : Hydro \nAgency Name : \(hydroBill.agency) \nUnit Consumed : \(hydroBill.unitsConsumed.concatUnits())"
 //            } else {
-//                if activeCustomerBill?.billType == billTypes.Internet{
+//            if activeCustomerBill?.billType == Bill.billTypes.Internet{
 //                    cell.textLabel?.numberOfLines = 12
 //                    let internetBill = activeCustomerBill as! Internet
 //                    typeDetail = "\nBill Type : Internet \nProvider Name : \(internetBill.providerName) \nInternet Used : \(internetBill.internetUsed.conactGB())"
 //                }
 //            }
-  //  }
-    cell.textLabel?.text = "Bill ID : \(String(describing: activeCustomerBill!.billId)) \n Bill Date : \(String(describing: activeCustomerBill!.billDate)) \n Bill Type : \(String(describing: activeCustomerBill!.billType)) \n Bill Total : \(String(describing: activeCustomerBill!.billAmount))"
+//    }
+    cell.textLabel?.text = "Bill ID : \(String(describing: activeCustomerBill!.billId)) \n Bill Date : \(String(describing: activeCustomerBill!.billDate)) \n Bill Type : \(String(describing: activeCustomerBill!.billType)) \n Bill Total : \(String(describing: activeCustomerBill!.billAmount))\n \(typeDetail)"
        return cell
    }
    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
