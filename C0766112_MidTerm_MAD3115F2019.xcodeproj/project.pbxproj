@@ -120,9 +120,7 @@
 				9B78F034236B3F10003C00B7 /* AppDelegate.swift */,
 				9B78F038236B3F10003C00B7 /* Main.storyboard */,
 				9B78F03B236B3F12003C00B7 /* Assets.xcassets */,
-				1A69CC0C2373E15D009C9BA6 /* iconfinder_Login_73221.png */,
-				9B55CEAB23738C0400E7A521 /* billAppIcon.png */,
-				9B78F046236B4020003C00B7 /* lambton.jpg */,
+				9BB7BE822376475C00E04C5B /* resources */,
 				9B78F03D236B3F12003C00B7 /* LaunchScreen.storyboard */,
 				9B78F040236B3F12003C00B7 /* Info.plist */,
 				9B055933236B9B8A0056A416 /* Customers.plist */,
@@ -132,6 +130,16 @@
 				9B9381332375EF7D00F486F7 /* addNewBillViewController.swift */,
 			);
 			path = C0766112_MidTerm_MAD3115F2019;
+			sourceTree = "<group>";
+		};
+		9BB7BE822376475C00E04C5B /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				9B78F046236B4020003C00B7 /* lambton.jpg */,
+				1A69CC0C2373E15D009C9BA6 /* iconfinder_Login_73221.png */,
+				9B55CEAB23738C0400E7A521 /* billAppIcon.png */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
