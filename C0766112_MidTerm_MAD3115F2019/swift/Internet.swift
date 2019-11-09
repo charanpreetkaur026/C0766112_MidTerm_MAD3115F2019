@@ -20,10 +20,6 @@ class Internet: Bill{
         super.init(billId: billId, billDate: billDate, billType: billType, billAmount: billAmount)
     }
     
-    override func display() {
-        super.display()
-        print("Provider Name: \(providerName)")
-        print("Internet Used: \(internetUsed.conactGB())")
-    }
+    
     
 }

@@ -14,18 +14,14 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     private func addLogoutButton()
     {
         let btnLogout=UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(CustomerListTableViewController.logout(sender:)))
-        
         navigationItem.leftBarButtonItem=btnLogout
     }
     private func addNewCustomerButton()
     {
         let btnNewCustomer=UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(CustomerListTableViewController.addNewCustomer(sender:)))
-        
         navigationItem.rightBarButtonItem=btnNewCustomer
     }
-    
     // navigating through buttons
-    
     @objc
     func logout(sender: UIBarButtonItem)
     {
@@ -35,16 +31,13 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     @objc
     func addNewCustomer(sender: UIBarButtonItem)
     {
-        
         let sb1=UIStoryboard(name: "Main", bundle: nil)
         let addCustomerVC=sb1.instantiateViewController(withIdentifier: "addCustomerVC") as! addNewCustomerViewController
         navigationController?.pushViewController(addCustomerVC, animated: true)
-        
     }
     
     @IBOutlet var customerTable: UITableView!
     public var Email: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // aa
@@ -63,7 +56,6 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return obj.returnCount()
     }
-
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
@@ -72,20 +64,14 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         return cell
         //cell?.textLabel?.text = self.customerArray[indexPath.row].fullName
     }
-
-    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         let header = "Customers List"
         return header
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         customerTable.reloadData()
-        
     }
-    //let temp = obj.returnCustObject(custID: Int(IndexPath.row+1))
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
          let temp = obj.returnCustObject(custID: Int(indexPath.row+1))
         Customer.activeCustomer.customerId = temp!.customerId
@@ -93,13 +79,9 @@ class CustomerListTableViewController: UIViewController, UITableViewDelegate, UI
         Customer.activeCustomer.lastName = temp!.lastName
         //Customer.activeCustomer.fullName = temp!.fullName
         Customer.activeCustomer.totalBillAmount = temp!.totalBillAmount
-        
         let sb = UIStoryboard(name: "Main", bundle: nil)
-       
         let billListVC = sb.instantiateViewController(withIdentifier: "BillListVC") as! BillDetailsViewController
             billListVC.billdata=obj.returnCustObject(custID: indexPath.row+1); self.navigationController?.pushViewController(billListVC, animated: true)
-       
-     
         }
         //billListVC.billdata = obj.returnCustObject(custID: indexPath.row + 1)
         

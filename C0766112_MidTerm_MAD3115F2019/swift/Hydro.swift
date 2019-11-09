@@ -19,10 +19,6 @@ import Foundation
         , billAmount: billAmount)
         
     }
-    override func display() {
-        super.display()
-        print("Agency Name: \(agency)")
-        print("Units Consumed: \(unitsConsumed.concatUnits())")
-    }
+    
     
 }

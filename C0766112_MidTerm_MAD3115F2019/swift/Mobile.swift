@@ -24,15 +24,7 @@ class Mobile:Bill{
         self.minutesUsed = minutesUsed
         super.init(billId: billId, billDate:billDate, billType: billType, billAmount: billAmount)
     }
-    override func display() {
-        super.display()
-        print("Manufactuer Name : \(mobileManufacturer)")
-        print("Plan Name: \(plan)")
-        print("Mobile Number: \(mobileNum)")
-        print("Internet Used: \(internetUsed.conactGB())")
-        print("Minutes Used: \(minutesUsed.concatMin())")
-        
-    }
+    
     
     
 }

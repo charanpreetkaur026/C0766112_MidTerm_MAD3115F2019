@@ -28,11 +28,6 @@ import Foundation
         self.billType = billType
     }
     
-     func display(){
-        print("Bill ID: \(billId)")
-        print("Bill Date: \(billDate)")
-        print("Bill Type: \(billType)")
-        print("Bill Amount: \(billAmount.currencyFormat())")
-    }
+    
     
 }

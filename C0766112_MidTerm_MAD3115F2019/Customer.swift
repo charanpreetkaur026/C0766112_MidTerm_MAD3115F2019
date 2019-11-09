@@ -1,10 +1,3 @@
-//
-//  Customer.swift
-//  C0766112_MidTerm_MAD3115F2019
-//
-//  Created by MacStudent on 2019-10-31.
-//  Copyright © 2019 MacStudent. All rights reserved.
-//
 
 import Foundation
 class Customer{
@@ -19,16 +12,7 @@ class Customer{
     var totalBillAmount: Float = 0.0
     static var activeCustomer = Customer()
     var billDictionary = [Int:Bill]()
-     //var arrayBill : [Bill]
-//    var TotalAmountToPay: Float
-//    {
-//        var TotalAmount: Float = 0.0
-//        for bill in billDictionary//arrayBill
-//        {
-//            TotalAmount = TotalAmount + bill.totalBillAmount
-//        }
-//        return TotalAmount
-//    }
+
     init(){
         self.customerId = Int()
         self.firstName = String()
@@ -41,11 +25,19 @@ class Customer{
         self.firstName = firstName
         self.lastName = lastName
         self.email = email
+    }
+    init(customerId: Int, firstName: String, lastName: String ,  email: String, bills :[Int:Bill]) {
+        self.customerId = customerId
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.billDictionary = bills
         
     }
-    func addBillToCustomer(b:Bill){
+    func addBillToCustomer(b:Bill)
+    {
         billDictionary.updateValue(b, forKey: b.billId)
-        print("BillDictionary:  \(billDictionary)")
+        //print("BillDictionary:  \(billDictionary)")
     }
     func calcTotalBillAmount() -> Float
     {
